@@ -49,4 +49,6 @@ public class ProfileService {
 
         return profileRepository.save(existingProfile);
     }
+
+    public void deleteProfile(Profile profile){ profileRepository.delete(profile);}
 }

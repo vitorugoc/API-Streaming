@@ -16,7 +16,7 @@ public class ProfileController {
     }
 
     @PostMapping()
-    public ResponseEntity<String> createUser(@RequestBody ProfileRequest request){
+    public ResponseEntity<String> createProfile(@RequestBody ProfileRequest request){
         profileService.createProfile(request);
         return ResponseEntity.ok("Perfil criado com sucesso!");
     }
@@ -43,7 +43,8 @@ public class ProfileController {
 
     @DeleteMapping("/delete/{idProfile}")
     public  ResponseEntity<String> deleteProfile(@PathVariable Integer idProfile){
-//        profileService.deleteProfile(idProfile);
+        Profile toDeleteProfile = profileService.findProfileById(idProfile);
+        profileService.deleteProfile(toDeleteProfile);
 
         return ResponseEntity.ok("Perfil deletado com sucesso!");
     }
