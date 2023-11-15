@@ -1,7 +1,5 @@
 package com.ufmg.streaming.API.Streaming.payment;
 
-import com.ufmg.streaming.API.Streaming.profile.Profile;
-import com.ufmg.streaming.API.Streaming.profile.ProfileRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
