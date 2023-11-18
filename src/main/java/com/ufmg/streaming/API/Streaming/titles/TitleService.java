@@ -1,12 +1,11 @@
 package com.ufmg.streaming.API.Streaming.titles;
 
-import com.ufmg.streaming.API.Streaming.profile.Profile;
-import com.ufmg.streaming.API.Streaming.profile.ProfileRequest;
-import com.ufmg.streaming.API.Streaming.user.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class TitleService {
     private final TitleRepository titleRepository;
 
